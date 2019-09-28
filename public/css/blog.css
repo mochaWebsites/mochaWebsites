@@ -1,0 +1,43 @@
+.blog {
+  padding-top: 54px; }
+  .blog article {
+    margin: 0; }
+  .blog .box {
+    max-width: 900px; }
+  .blog .meta-content-container {
+    display: block; }
+  .blog .content-container {
+    width: 100%; }
+  .blog .blog-header {
+    padding: 1rem;
+    position: relative; }
+    .blog .blog-header a {
+      margin: 0 10px; }
+      .blog .blog-header a:first-of-type {
+        margin-left: 0; }
+    .blog .blog-header .date {
+      color: #67aeff;
+      text-align: left;
+      margin: 0;
+      margin-top: 30px; }
+  .blog h1 {
+    font-size: calc(0.5rem + 8vmin);
+    line-height: calc(0.5rem + 6vmin);
+    margin-top: 28px;
+    text-align: left; }
+  .blog h3 {
+    margin-bottom: 24px;
+    position: relative; }
+
+@media (min-width: 600px) {
+  .blog {
+    padding: 146px 16px 20px 16px; } }
+
+@media (min-width: 1080px) {
+  .blog {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 136px;
+    margin-right: 136px; }
+    .blog section {
+      margin: 0; } }
