@@ -37,12 +37,18 @@ class Display {
 
     this.descriptions = document.getElementById('descriptions');
 
+    this.contactForm = document.getElementById('contact');
+
     this.attachListeners();
   }
 
   attachListeners() {
     this.arrowContainer.addEventListener('click', this.onArrowClick.bind(this));
     this.descriptions.addEventListener('touchstart', this.onDescriptionTouch.bind(this));
+  }
+
+  onContactSubmit(e) {
+    e.preventDefault();
   }
 
   onArrowClick(e) {
