@@ -92,18 +92,21 @@
     <div class="topper"></div>
     <div class="meta-content-container">
       <div class="content-container">
-        <form action="/contact" method="POST" id="contact-form">
+        <form id="contact-form" action="/contact" method="POST" id="contact-form" novalidate>
           <label>
             <h4>Your Name</h4>
-            <input type="text" name="name" id="contact-name" placeholder="Your Name">
+            <input type="text" name="name" id="contact-name" placeholder="Your Name" required>
+            <p class="input-message hidden">What's your name?</p>
           </label>
           <label>
             <h4>Email</h4>
-            <input type="text" name="email" id="contact-email" placeholder="Email">
+            <input type="email" name="email" id="contact-email" placeholder="Email" required>
+            <p class="input-message hidden">Invalid email</p>
           </label>
           <label>
             <h4>How Can I Help You?</h4>
-            <textarea type="text" name="desc" id="contact-desc"></textarea>
+            <textarea type="text" name="desc" id="contact-desc" minlength="16" placeholder="A brief description" required></textarea>
+            <p class="input-message hidden">Please give at least 16 characters</p>
           </label>
           <button type="submit">Send</input>
         </form>

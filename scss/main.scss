@@ -12,6 +12,8 @@ $dark-purple: #472247;
 $light-purple: #d8d4f2;
 
 $off-white: #dfdfdf;
+$invalid-red: #e65e63;
+$success-green: #c2ffd0;
 
 body {
   background-color: $dark-blue;
@@ -64,7 +66,8 @@ a {
 form {
   label {
     display: inline-block;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
+    position: relative;
     width: 100%;
   }
 
@@ -77,7 +80,7 @@ form {
     resize: none;
   }
 
-  input[type=text], textarea {
+  input, textarea {
     background-color: $dark-grey;
     border: 1px solid $light-grey;
     border-radius: 8px;
@@ -88,6 +91,7 @@ form {
     // height: 40px;
     // margin-top: 14px;
     padding: 6px 12px;
+    transition: border-color 2s;
     width: 100%;
   }
 
@@ -105,6 +109,33 @@ form {
       color: $off-white;
       border-color: $off-white;
     }
+  }
+
+  .input-message {
+    font-size: 16px;
+  }
+
+  input + .input-message {
+    color: $invalid-red;
+    position: absolute;
+    bottom: -28px;
+    left: 12px;
+  }
+
+  textarea + .input-message {
+    color: $invalid-red;
+    position: absolute;
+    bottom: -24px;
+    left: 12px;
+  }
+
+  .error {
+    border-color: $invalid-red;
+    box-shadow: none;
+  }
+
+  .success {
+    border-color: $success-green;
   }
 }
 
@@ -550,7 +581,7 @@ section, article {
 
       li {
         display: inline-block;
-        margin-left: 48px;
+        margin-left: 4vw;
         padding: 10px;
 
         &:hover {

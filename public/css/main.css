@@ -50,7 +50,8 @@ a {
 
 form label {
   display: inline-block;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+  position: relative;
   width: 100%; }
 
 form h4 {
@@ -59,7 +60,7 @@ form h4 {
 form textarea {
   resize: none; }
 
-form input[type=text], form textarea {
+form input, form textarea {
   background-color: #2b2b2b;
   border: 1px solid #4d4d4d;
   border-radius: 8px;
@@ -68,6 +69,7 @@ form input[type=text], form textarea {
   font-size: .8em;
   font-family: 'Source Sans Pro', sans-serif;
   padding: 6px 12px;
+  transition: border-color 2s;
   width: 100%; }
 
 form button {
@@ -82,6 +84,28 @@ form button {
   form button:hover {
     color: #dfdfdf;
     border-color: #dfdfdf; }
+
+form .input-message {
+  font-size: 16px; }
+
+form input + .input-message {
+  color: #e65e63;
+  position: absolute;
+  bottom: -28px;
+  left: 12px; }
+
+form textarea + .input-message {
+  color: #e65e63;
+  position: absolute;
+  bottom: -24px;
+  left: 12px; }
+
+form .error {
+  border-color: #e65e63;
+  box-shadow: none; }
+
+form .success {
+  border-color: #c2ffd0; }
 
 header {
   background: none;
@@ -359,7 +383,7 @@ section, article {
       margin-right: 20px; }
       nav #large-display li {
         display: inline-block;
-        margin-left: 48px;
+        margin-left: 4vw;
         padding: 10px; }
         nav #large-display li:hover {
           border-bottom: 1px solid white; }
@@ -504,8 +528,8 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 84px;
       line-height: 120px; }
     .home #landing-page .logo-home {
-      width: 360px;
-      margin-top: calc(20px + 8vh);
+      width: calc(200px + 12vh);
+      margin-top: calc(2vh);
       margin-bottom: 60px; }
   #contact form label {
     margin-bottom: 20px; }

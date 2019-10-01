@@ -37,18 +37,90 @@ class Display {
 
     this.descriptions = document.getElementById('descriptions');
 
-    this.contactForm = document.getElementById('contact');
+    this.contactForm = document.getElementById('contact-form');
+    this.name = document.getElementById('contact-name');
+    this.email = document.getElementById('contact-email');
+    this.desc = document.getElementById('contact-desc');
 
     this.attachListeners();
   }
 
   attachListeners() {
-    this.arrowContainer.addEventListener('click', this.onArrowClick.bind(this));
+    this.debounceOnArrowClick = this.debounce(this.onArrowClick.bind(this), 400, true);
+    this.arrowContainer.addEventListener('click', this.debounceOnArrowClick.bind(this));
     this.descriptions.addEventListener('touchstart', this.onDescriptionTouch.bind(this));
+    this.contactForm.addEventListener('submit', this.onContactSubmit.bind(this));
+    this.name.addEventListener('input', this.onFieldInput.bind(this));
+    this.email.addEventListener('input', this.onFieldInput.bind(this));
+    this.desc.addEventListener('input', this.onFieldInput.bind(this));
+  }
+
+  debounce(func, waitTime, immediate) {
+    let timeout;
+
+    return function() {
+      const context = this
+      const args = arguments;
+
+      const later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+
+      const callNow = immediate && !timeout;
+
+      clearTimeout(timeout);
+      timeout = setTimeout(later, waitTime);
+
+      if (callNow) func.apply(context, args);
+    };
   }
 
   onContactSubmit(e) {
     e.preventDefault();
+
+    const form = e.currentTarget;
+
+    if (this.isValidForm(form)) {
+      this.contactForm.submit();
+    };
+  }
+
+  isValidForm(form) {
+    const inputs = form.querySelectorAll('input, textarea');
+
+    inputs.forEach(this.validateInput);
+
+    return form.checkValidity();
+  }
+
+  validateForm(form) {
+
+  }
+
+  validateInput(input) {
+    const message = input.nextElementSibling;
+    const isValid = input.validity.valid;
+
+    if (isValid) {
+      message.classList.add('hidden');
+      input.classList.remove('error');
+      input.classList.add('success');
+    } else {
+      message.classList.remove('hidden');
+      input.classList.add('error');
+      input.classList.remove('success');
+    }
+
+    return isValid;
+  }
+
+  onFieldInput(e) {
+    this.validateInput(e.currentTarget);
+  }
+
+  onDescInput(e) {
+
   }
 
   onArrowClick(e) {

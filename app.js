@@ -1,5 +1,3 @@
-const path = require('path');
-
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -12,6 +10,7 @@ const rootDir = require('./util/rootPath');
 const helpers = require('./util/handlebarsHelpers');
 const mainRoutes = require('./routes/main');
 const formRoutes = require('./routes/form');
+const blogRoutes = require('./routes/blog');
 
 app.engine('hbs', hbs({
   extname: 'hbs',
@@ -28,5 +27,6 @@ app.use(express.static(rootDir + '/public'));
 
 app.use(formRoutes);
 app.use(mainRoutes);
+app.use(blogRoutes);
 
 app.listen(3000);
