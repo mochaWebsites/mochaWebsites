@@ -1,0 +1,42 @@
+<header class="blog-header">
+  <a>blogs</a>><a>{{ category }}</a>><a>{{ title }}</a>
+  <h1>{{ title }}</h1>
+  <h5 class="date">{{{ formatDate date }}}</h5>
+</header>
+<article class="box">
+  <div class="topper"></div>
+  <div class="meta-content-container">
+    <div class="content-container">
+      {{#each sections }}
+        <div class="content-container">
+          <header id="header-{{ @index }}" class="subsection-header">
+            <img src="/images/SVG/logo-border-thick.svg" class="header-icon">
+            <h3>{{ heading }}</h3>
+          </header>
+          {{{content}}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  <div class="topper"></div>
+</article>
+<aside class="sidebar">
+  <ul>
+    <h3>Directory</h3>
+    {{#each sections }}
+      <a href="#header-{{ @index }}"><li >{{ heading }}</li></a>
+    {{/each}}
+  </ul>
+</aside>
+
+
+{{!-- {
+  title: 'Blog Title',
+  date: 'xx-xx-xx',
+  category: ['basic web'],
+  sections: [
+    { heading: 'heading', content: '<p></p><code></code'},
+    { heading: 'heading', content: '<p></p><code></code><p></p><ul></ul>'},
+    { heading: 'heading', content: '<p></p><code></code'}
+  ]
+} --}}

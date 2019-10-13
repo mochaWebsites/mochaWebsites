@@ -1,0 +1,60 @@
+<section id="add-category">
+  <header>
+    <h2>Add Category</h2>
+  </header>
+  <div class="box small-box">
+    <div class="topper"></div>
+    <div class="meta-content-container">
+      <div class="content-container">
+        <form id="edit-category-form" action="/admin/categories/add" method="POST" novalidate>
+          <label>
+            <h4>Title</h4>
+            <input type="text" name="title" id="category-title-add" placeholder="Title" required>
+            <p class="input-message hidden">Invalid Category Title</p>
+          </label>
+          <button type="submit">Add</input>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="edit-category">
+  <header>
+    <h2>Edit Category</h2>
+  </header>
+  <div class="box small-box">
+    <div class="topper"></div>
+    <div class="meta-content-container">
+      <div class="content-container">
+        <form id="edit-category-form" action="/admin/categories/edit" method="POST" novalidate>
+          <label>
+            <h4>Title</h4>
+            <input type="text" name="title" id="category-title-edit" placeholder="Title" required>
+            <p class="input-message hidden">Invalid Category Title</p>
+          </label>
+          <button type="submit">Add</input>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="delete-category">
+  <header>
+    <h2>Delete Category</h2>
+  </header>
+  <div class="box small-box">
+    <div class="topper"></div>
+    <div class="meta-content-container">
+      <div class="content-container">
+        <form id="edit-category-form" action="/admin/categories/delete" method="POST" novalidate>
+          <label>
+            <h4>Title</h4>
+            <input type="text" name="title" id="category-title-delete" placeholder="Title" required>
+            <p class="input-message hidden">Invalid Category Title</p>
+          </label>
+          <button type="submit">Add</input>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

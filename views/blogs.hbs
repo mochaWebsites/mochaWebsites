@@ -3,7 +3,7 @@
     <h2>Blog Index</h2>
     {{!-- <h5 class="date">Sort By:</h5> --}}
   </header>
-  <div class="box">
+  <div class="box small-box">
     <div class="topper"></div>
     <div class="meta-content-container">
       <div class="content-container">
@@ -20,8 +20,9 @@
         <div class="blog-list">
           {{!-- <h4>Basic Web</h4> --}}
           <ul>
-            <a href="/blog_1"><li>What is the DOM?</li></a>
-            <a href="/blog_2"><li>Object Creation Patterns: Factory Functions</li></a>
+            {{#each blogs}}
+            <a href="/blogs/{{_id}}"><li>{{title}}</li></a>
+            {{/each}}
           </ul>
         </div>
       </div>

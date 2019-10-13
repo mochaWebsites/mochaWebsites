@@ -8,9 +8,12 @@ const app = express();
 
 const rootDir = require('./util/rootPath');
 const helpers = require('./util/handlebarsHelpers');
+const mongoConnect = require('./util/database').mongoConnect;
+
 const mainRoutes = require('./routes/main');
 const formRoutes = require('./routes/form');
 const blogRoutes = require('./routes/blog');
+const adminRoutes = require('./routes/admin');
 
 app.engine('hbs', hbs({
   extname: 'hbs',
@@ -28,5 +31,8 @@ app.use(express.static(rootDir + '/public'));
 app.use(formRoutes);
 app.use(mainRoutes);
 app.use(blogRoutes);
+app.use(adminRoutes);
 
-app.listen(3000);
+mongoConnect(() => {
+  app.listen(3000);
+});

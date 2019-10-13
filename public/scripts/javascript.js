@@ -23,7 +23,7 @@ class Nav {
   }
 }
 
-class Display {
+class Home {
   constructor() {
     this.ingredientId = 0;
 
@@ -198,18 +198,34 @@ class Display {
   }
 }
 
+class Blog {
+  constructor() {
+    this.wrapPrismCode();
+  }
+
+  wrapPrismCode() {
+    const codeBlocks = document.querySelectorAll('code');
+
+    codeBlocks.forEach(codeEl => {
+      const prismScript = document.createElement('script');
+      const codeContents = codeEl.children;
+
+      prismScript.setAttribute('type', 'prism-html-markup');
+      codeEl.appendChild(prismScript);
+
+      for (let i = 0; i < codeContents.length; i += 1) {
+        prismScript.append(codeContents[i]);
+      }
+    });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   const nav = new Nav();
 
-  switch (window.location.pathname) {
-    case '/':
-      const home = new Display();
-      break;
-    case '/about':
-      // const about = new About();
-      break;
-    case '/blog':
-      // const blog = new Blog();
-      break;
+  if (window.location.pathname.includes('blogs/')) {
+    // const blog = new Blog();
+  } else if (window.location.pathname === '/') {
+    const home = new Home();
   }
 });

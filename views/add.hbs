@@ -1,0 +1,30 @@
+<section id="add">
+  <header>
+    <h2>Add Blog</h2>
+  </header>
+  <div class="box small-box">
+    <div class="topper"></div>
+    <div class="meta-content-container">
+      <div class="content-container">
+        <form id="add-form" action="/admin/add" method="POST" enctype="multipart/form-data" novalidate>
+          <label>
+            <h4>Title</h4>
+            <input type="text" name="title" id="add-title" placeholder="Blog Title" required>
+            <p class="input-message hidden">What's the title?</p>
+          </label>
+          <label>
+            <h4>Date</h4>
+            <input type="date" name="date" id="add-date" required>
+            <p class="input-message hidden">Invalid date</p>
+          </label>
+          <label>
+            <h4>Content</h4>
+            <input type="file" name="file" id="add-file">
+            <p class="input-message hidden">Invalid file</p>
+          </label>
+          <button type="submit">Add</input>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

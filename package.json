@@ -20,13 +20,16 @@
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
+    "formidable": "^1.2.1",
     "handlebars": "^4.3.4",
     "handlebars-intl": "^1.1.2",
     "mailgun-js": "^0.22.0",
+    "mongodb": "^3.3.2",
     "node-sass": "^4.12.0",
     "nodemailer": "^6.3.0",
     "nodemailer-mailgun-transport": "^1.4.0",
     "nodemailer-sendgrid-transport": "^0.2.0",
-    "prismjs": "^1.17.1"
+    "prismjs": "^1.17.1",
+    "showdown": "^1.9.0"
   }
 }

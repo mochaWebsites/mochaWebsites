@@ -26,4 +26,4 @@ class Email {
   }
 }
 
-module.exports = new Email();
+module.exports = Email;
