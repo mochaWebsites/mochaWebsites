@@ -51,13 +51,13 @@ exports.postAddBlog = (req, res, err) => {
 
       const blog = new Blog(blogData);
       blog.save()
-          .then(result => {
-            console.log('blog saved!');
-            res.redirect('/blogs');
-          })
-          .catch(err => {
-            console.log(err);
-          })
+        .then(result => {
+          console.log('blog saved!');
+          res.redirect('/blogs');
+        })
+        .catch(err => {
+          console.log(err);
+        })
     });
   });
 }
