@@ -51,6 +51,8 @@ app.use(mainRoutes);
 app.use(blogRoutes);
 app.use(adminRoutes);
 
+app.listen(3000);
+
 mongoose
   .connect(
     MONGODB_URI,
