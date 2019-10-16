@@ -11,6 +11,11 @@ $light-purple: #d8d4f2;
 $off-white: #dfdfdf;
 
 .home {
+  #landing-page-content {
+    max-width: 1340px;
+    margin: 0 12px;
+  }
+
   #landing-page {
     background: rgb(0,54,115);
     background: linear-gradient(142deg, rgba(0,54,115,1) 35%, rgba(0,118,222,1) 100%);
@@ -29,18 +34,18 @@ $off-white: #dfdfdf;
       line-height: 56px;
       margin-top: calc(20px + 4vh);
       margin-bottom: 0;
-      padding-left: 68px;
+      //padding-left: 68px;
       text-align: left;
     }
 
     h4 {
       bottom: 4vh;
-      padding-left: 68px;
+      //padding-left: 68px;
       position: absolute;
       text-align: left;
     }
 
-    div {
+    #landing-page-image-container {
       text-align: center;
     }
   }
@@ -54,6 +59,7 @@ $off-white: #dfdfdf;
   .logo-home {
     text-align: left;
     margin-top: calc(28px + 4vh);
+    max-width: 500px;
     width: calc(200px + 8vh);
   }
 
@@ -122,18 +128,22 @@ $off-white: #dfdfdf;
       padding-top: 82px;
       padding-left: 0;
 
+      #landing-page-content {
+        margin: 0 44px;
+      }
+
       h1 {
         font-size: 48px;
         letter-spacing: 2.8px;
         line-height: 68px;
-        padding-left: 112px;
+        //padding-left: 112px;
         text-align: left;
       }
 
       h4 {
         font-size: 24px;
         margin-top: calc(30px + 10vh);
-        padding-left: 112px;
+        //padding-left: 112px;
       }
 
       .title {
@@ -192,26 +202,26 @@ $off-white: #dfdfdf;
 
       h1 {
         display: inline-block;
-        padding-left: 156px;
-        font-size: 3.4rem;
-        line-height: 5.2rem;
+        //padding-left: 156px;
+        font-size: 50px;
+        line-height: 70px;
       }
 
       h4 {
-        padding-left: 156px;
+        //padding-left: 156px;
       }
 
       .title {
-        font-size: 6.8rem;
-        line-height: 9rem;
+        font-size: 80px;
+        line-height: 100px;
       }
 
       .logo-home {
         margin: 0;
         position: absolute;
         bottom: 14vh;
-        right: 15vw;
-        width: 30vw;
+        //right: 15vw;
+        width: 50vh;
       }
     }
 
@@ -234,6 +244,16 @@ $off-white: #dfdfdf;
     #arrow-right-enabled, #arrow-right-disabled {
       margin-right: 10px;
       padding: 20px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .home {
+    #landing-page {
+      #landing-page-content {
+        margin: 0 auto;
+      }
     }
   }
 }

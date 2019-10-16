@@ -13,18 +13,21 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.3"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
+    "connect-mongodb-session": "^2.2.0",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
     "formidable": "^1.2.1",
     "handlebars": "^4.3.4",
     "handlebars-intl": "^1.1.2",
     "mailgun-js": "^0.22.0",
     "mongodb": "^3.3.2",
+    "mongoose": "^5.7.5",
     "node-sass": "^4.12.0",
     "nodemailer": "^6.3.0",
     "nodemailer-mailgun-transport": "^1.4.0",

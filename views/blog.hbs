@@ -1,13 +1,15 @@
 <header class="blog-header">
-  <a>blogs</a>><a>{{ category }}</a>><a>{{ title }}</a>
   <h1>{{ title }}</h1>
-  <h5 class="date">{{{ formatDate date }}}</h5>
+  {{!-- <div>
+    <a>blogs</a>><a>{{ category }}</a>><a>{{ title }}</a>
+  </div> --}}
+  <p class="date">{{{ formatDate date }}}</p>
 </header>
 <article class="box">
   <div class="topper"></div>
   <div class="meta-content-container">
     <div class="content-container">
-      {{#each sections }}
+      {{#each htmlSections }}
         <div class="content-container">
           <header id="header-{{ @index }}" class="subsection-header">
             <img src="/images/SVG/logo-border-thick.svg" class="header-icon">
@@ -23,7 +25,7 @@
 <aside class="sidebar">
   <ul>
     <h3>Directory</h3>
-    {{#each sections }}
+    {{#each htmlSections }}
       <a href="#header-{{ @index }}"><li >{{ heading }}</li></a>
     {{/each}}
   </ul>

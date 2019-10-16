@@ -3,9 +3,9 @@ const formidable = require('formidable');
 const Blog = require('../models/Blog');
 
 exports.renderBlogs = (req, res, err) => {
-  Blog.fetchAll()
-      .then(data => {
-        res.render('blogs', {layout: 'default', template: 'about', blogs: data});
+  Blog.find()
+      .then(blogs => {
+        res.render('blogs', {layout: 'default', template: 'about', blogs: blogs});
       })
       .catch(err => {
         throw err;
@@ -15,18 +15,18 @@ exports.renderBlogs = (req, res, err) => {
 exports.renderBlog = (req, res, err) => {
   const id = req.params.id;
 
-  Blog.getById(id)
-      .then(data => {
-        const blog = data[0];
+  Blog.findById(id)
+    .then(blog => {
+      blog.layout = 'default';
+      blog.template = 'blog';
 
-        blog.layout = 'default';
-        blog.template = 'blog';
+      console.log(blog.layout);
 
-        res.render('blog', blog);
-      })
-      .catch(err => {
-        throw err;
-      });
+      res.render('blog', blog);
+    })
+    .catch(err => {
+      throw err;
+    });
 }
 
 // const title = req.body.title;

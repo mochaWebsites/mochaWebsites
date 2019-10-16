@@ -1,40 +1,45 @@
 <section id="landing-page">
-  <h1>
-    <span class="light">Make your next</span>
-    <br>
-    <span class="light indent">website a</span>
-    <br>
-    <span class="title">Mocha</span>
-  </h1>
-  <div>
-    <img src="/images/SVG/logo-no-text.svg" class="logo-home" alt="large mocha logo">
-  <div>
-  <h4 class="light">Web Development Services</h4>
+  <div id="landing-page-content">
+    <h1>
+      <span class="light">Make your next</span>
+      <br>
+      <span class="light indent">website a</span>
+      <br>
+      <span class="title">Mocha</span>
+    </h1>
+    <div id="landing-page-image-container">
+      <img src="/images/SVG/logo-no-text.svg" class="logo-home" alt="large mocha logo">
+    <div>
+    <h4 class="light">Web Development Services</h4>
+  </div>
 </section>
 <section>
   {{!-- <div class="heading-container">
     <h2>My Services</h2>
   </div> --}}
-  <header>
-    <h2>My Services</h2>
-  </header>
-  <div class="box">
-    <div class="topper"></div>
-    <div class="meta-content-container">
-      <div class="content-container">
-        <p>Hi! My name is Ian Lawson.</p>
-        <p>I'm a full-stack web developer.</p>
-        <p>I can provide you with an amazing website that fits your needs.</p>
-        <p>If you'd like to know a little more about the barista navigate to my dedicated <a href="/">about page</a>.</p>
-      </div>
-      <div class="img-container">
-        <img src="/images/photos/portrate4.jpg" alt="standing outside">
+  <div class="main-content-container">
+    <header>
+      <h2>My Services</h2>
+    </header>
+    <div class="box">
+      <div class="topper"></div>
+      <div class="meta-content-container">
+        <div class="content-container">
+          <p>Hi! My name is Ian Lawson.</p>
+          <p>I'm a full-stack web developer.</p>
+          <p>I can provide you with an amazing website that fits your needs.</p>
+          <p>If you'd like to know a little more about the barista navigate to my dedicated <a href="/">about page</a>.</p>
+        </div>
+        <div class="img-container">
+          <img src="/images/photos/portrate4.jpg" alt="standing outside">
+        </div>
       </div>
     </div>
   </div>
 </section>
 <section id="ingredients">
-  <header>
+  <div class="main-content-container">
+    <header>
     <h2>Ingredients</h2>
   </header>
   <div class="box">
@@ -83,36 +88,39 @@
       </div>
     </div>
   </div>
+  </div>
 </section>
 <section id="contact">
-  <header>
-    <h2>Contact</h2>
-  </header>
-  <div class="box">
-    <div class="topper"></div>
-    <div class="meta-content-container">
-      <div class="content-container">
-        <form id="contact-form" action="/contact" method="POST" id="contact-form" novalidate>
-          <label>
-            <h4>Your Name</h4>
-            <input type="text" name="name" id="contact-name" placeholder="Your Name" required>
-            <p class="input-message hidden">What's your name?</p>
-          </label>
-          <label>
-            <h4>Email</h4>
-            <input type="email" name="email" id="contact-email" placeholder="Email" required>
-            <p class="input-message hidden">Invalid email</p>
-          </label>
-          <label>
-            <h4>How Can I Help You?</h4>
-            <textarea type="text" name="desc" id="contact-desc" minlength="16" placeholder="A brief description" required></textarea>
-            <p class="input-message hidden">Please give at least 16 characters</p>
-          </label>
-          <button type="submit">Send</input>
-        </form>
-      </div>
-      <div class="img-container">
-        <img src="/images/photos/drinking1.jpg">
+  <div class="main-content-container">
+    <header>
+      <h2>Contact</h2>
+    </header>
+    <div class="box">
+      <div class="topper"></div>
+      <div class="meta-content-container">
+        <div class="content-container">
+          <form id="contact-form" action="/contact" method="POST" id="contact-form" novalidate>
+            <label>
+              <h4>Your Name</h4>
+              <input type="text" name="name" id="contact-name" placeholder="Your Name" required>
+              <p class="input-message hidden">What's your name?</p>
+            </label>
+            <label>
+              <h4>Email</h4>
+              <input type="email" name="email" id="contact-email" placeholder="Email" required>
+              <p class="input-message hidden">Invalid email</p>
+            </label>
+            <label>
+              <h4>How Can I Help You?</h4>
+              <textarea type="text" name="desc" id="contact-desc" minlength="16" placeholder="A brief description" required></textarea>
+              <p class="input-message hidden">Please give at least 16 characters</p>
+            </label>
+            <button type="submit">Send</input>
+          </form>
+        </div>
+        <div class="img-container">
+          <img src="/images/photos/drinking1.jpg">
+        </div>
       </div>
     </div>
   </div>
