@@ -23,7 +23,7 @@ const helpers = require('./util/handlebarsHelpers');
 // const mongoConnect = require('./util/database').mongoConnect;
 
 const mainRoutes = require('./routes/main');
-const formRoutes = require('./routes/form');
+const formRoutes = require('./routes/email');
 const blogRoutes = require('./routes/blog');
 const adminRoutes = require('./routes/admin');
 

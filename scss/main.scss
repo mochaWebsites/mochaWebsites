@@ -381,11 +381,11 @@ section, article {
   box-sizing: border-box;
   margin: 18px 8px 3rem 8px;
 
-  // .box {
-  //   -webkit-box-shadow: 12px 12px 38px -15px rgba(0,0,0,0.58);
-  //   -moz-box-shadow: 12px 12px 38px -15px rgba(0,0,0,0.58);
-  //   box-shadow: 12px 12px 38px -15px rgba(0,0,0,0.58);
-  // }
+  .box {
+    -webkit-box-shadow: 12px 12px 38px -15px rgba(0,0,0,0.58);
+    -moz-box-shadow: 12px 12px 38px -15px rgba(0,0,0,0.58);
+    box-shadow: 12px 12px 38px -15px rgba(0,0,0,0.58);
+  }
 
   .small-box {
     display: inline-block;
@@ -453,8 +453,8 @@ section, article {
 
   nav {
     height: 82px;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 44px;
+    padding-right: 44px;
 
     .logo-nav {
       // margin-top: 6px;
@@ -467,8 +467,8 @@ section, article {
     }
 
     h1 {
-      font-size: 20px;
-      margin-left: 20px;
+      font-size: 28px;
+      margin-left: 12px;
     }
 
     #nav-overlay {
@@ -549,8 +549,6 @@ section, article {
 
   nav {
     height: 82px;
-    padding-left: 44px;
-    padding-right: 44px;
 
     .logo-nav {
       // margin-top: 6px;
@@ -560,11 +558,6 @@ section, article {
     .nav-btn {
       // padding-top: 5px;
       width: 36px;
-    }
-
-    h1 {
-      font-size: 28px;
-      margin-left: 12px;
     }
 
     #nav-overlay {
@@ -613,8 +606,6 @@ section, article {
   }
 
   nav {
-    padding-left: 156px;
-    padding-right: 156px;
     height: 82px;
     width: 100%;
 
@@ -625,16 +616,6 @@ section, article {
     .nav-btn {
       width: 36px;
     }
-
-    // h1 {
-    //   font-size: 38px;
-    // }
-
-    // h1 {
-    //   font-size: 20px;
-    //   // margin-left: 44px;
-    //   margin-left: 24px;
-    // }
 
     #hamburger {
       display: none;
@@ -674,9 +655,7 @@ section, article {
   .main-content-container {
     margin: 0 auto;
   }
-}
 
-@media (min-width: 1440px) {
   main {
     margin: 0 auto;
   }

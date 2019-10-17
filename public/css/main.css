@@ -276,6 +276,10 @@ section, article {
   border-radius: 0 20px 0 0;
   box-sizing: border-box;
   margin: 18px 8px 3rem 8px; }
+  section .box, article .box {
+    -webkit-box-shadow: 12px 12px 38px -15px rgba(0, 0, 0, 0.58);
+    -moz-box-shadow: 12px 12px 38px -15px rgba(0, 0, 0, 0.58);
+    box-shadow: 12px 12px 38px -15px rgba(0, 0, 0, 0.58); }
   section .small-box, article .small-box {
     display: inline-block;
     min-width: 60%; }
@@ -314,15 +318,15 @@ section, article {
     padding-left: 12px; }
   nav {
     height: 82px;
-    padding-left: 24px;
-    padding-right: 24px; }
+    padding-left: 44px;
+    padding-right: 44px; }
     nav .logo-nav {
       width: 68px; }
     nav .nav-btn {
       width: 36px; }
     nav h1 {
-      font-size: 20px;
-      margin-left: 20px; }
+      font-size: 28px;
+      margin-left: 12px; }
     nav #nav-overlay header {
       height: 72px;
       padding: 10px 36px; }
@@ -371,16 +375,11 @@ section, article {
       align-items: center;
       flex-wrap: wrap; }
   nav {
-    height: 82px;
-    padding-left: 44px;
-    padding-right: 44px; }
+    height: 82px; }
     nav .logo-nav {
       width: 68px; }
     nav .nav-btn {
       width: 36px; }
-    nav h1 {
-      font-size: 28px;
-      margin-left: 12px; }
     nav #nav-overlay header {
       height: 72px;
       padding: 10px 36px; }
@@ -404,8 +403,6 @@ section, article {
     section .img-container, article .img-container {
       padding: 20px; }
   nav {
-    padding-left: 156px;
-    padding-right: 156px;
     height: 82px;
     width: 100%; }
     nav .logo-nav {
@@ -435,9 +432,7 @@ section, article {
 
 @media (min-width: 1440px) {
   .main-content-container {
-    margin: 0 auto; } }
-
-@media (min-width: 1440px) {
+    margin: 0 auto; }
   main {
     margin: 0 auto; }
   nav #nav-content-box {
