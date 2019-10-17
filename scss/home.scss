@@ -10,9 +10,11 @@ $light-purple: #d8d4f2;
 
 $off-white: #dfdfdf;
 
+$max-content-width: 1440px;
+
 .home {
   #landing-page-content {
-    max-width: 1340px;
+    max-width: $max-content-width;
     margin: 0 12px;
   }
 
@@ -153,9 +155,13 @@ $off-white: #dfdfdf;
       }
 
       .logo-home {
-        width: calc(200px + 12vh);
+        width: calc(150px + 20vh);
         margin-top: calc(2vh);
         margin-bottom: 60px;
+      }
+
+      #landing-page-image-container {
+        
       }
     }
   }
@@ -201,27 +207,30 @@ $off-white: #dfdfdf;
       text-align: left;
 
       h1 {
-        display: inline-block;
-        //padding-left: 156px;
-        font-size: 50px;
-        line-height: 70px;
+        font-size: 65px;
+        line-height: 90px;
+
+        .title {
+          font-size: 1.4em;
+          line-height: 100px;
+        }
+      }
+
+      #landing-page-content {
+        margin-left: 44px;
       }
 
       h4 {
-        //padding-left: 156px;
-      }
-
-      .title {
-        font-size: 80px;
-        line-height: 100px;
+        font-size: 30px;
       }
 
       .logo-home {
         margin: 0;
-        position: absolute;
-        bottom: 14vh;
+        position: relative;
+        left: 220px;
+        bottom: 80px;
         //right: 15vw;
-        width: 50vh;
+        width: 45vh;
       }
     }
 
@@ -251,8 +260,22 @@ $off-white: #dfdfdf;
 @media (min-width: 1440px) {
   .home {
     #landing-page {
+      h1 {
+        font-size: 80px;
+        line-height: 100px;
+
+        .title {
+          font-size: 1.4em;
+          line-height: 140px;
+        }
+      }
+
       #landing-page-content {
         margin: 0 auto;
+      }
+
+      h4 {
+        font-size: 35px;
       }
     }
   }

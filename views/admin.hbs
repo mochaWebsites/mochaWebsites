@@ -1,40 +1,42 @@
 <section id="admin">
-  <header>
-    <h2>Admin Login</h2>
-  </header>
-  <div class="box small-box">
-    <div class="topper"></div>
-    <div class="meta-content-container">
-      <div class="content-container">
-        <form id="admin-form" action="/admin" method="POST" novalidate>
-          <label>
-            <h4>Username</h4>
-            <input type="text" name="username" id="username" placeholder="Username" required>
-            <p class="input-message hidden">What's your username?</p>
-          </label>
-          <label>
-            <h4>Password</h4>
-            <input type="password" name="password" id="admin-password" placeholder="Password" required>
-            <p class="input-message hidden">Invalid password</p>
-          </label>
-          <button type="submit">Send</input>
-        </form>
+  <div class="main-content-container">
+    <header>
+      <h2>Admin Login</h2>
+    </header>
+    <div class="box small-box">
+      <div class="topper"></div>
+      <div class="meta-content-container">
+        <div class="content-container">
+          <form id="admin-form" action="/admin" method="POST" novalidate>
+            <label>
+              <h4>Username</h4>
+              <input type="text" name="username" id="username" placeholder="Username" required>
+              <p class="input-message hidden">What's your username?</p>
+            </label>
+            <label>
+              <h4>Password</h4>
+              <input type="password" name="password" id="admin-password" placeholder="Password" required>
+              <p class="input-message hidden">Invalid password</p>
+            </label>
+            <button type="submit">Send</input>
+          </form>
+        </div>
       </div>
-    </div>
-    <div class="meta-content-container">
-      <div class="content-container">
-        <h4>Blogs</h4>
-        <ul>
-          <a><li>Add Blog</li></a>
-          <a><li>Edit Blog</li></a>
-          <a><li>Delete Blog</li></a>
-        </ul>
-        <h4>Blog Type</h4>
-        <ul>
-          <a><li>Add</li></a>
-          <a><li>Edit</li></a>
-          <a><li>Delete</li></a>
-        </ul>
+      <div id="blog-operations" class="meta-content-container">
+        <div class="content-container">
+          <h4>Blogs</h4>
+          <ul>
+            <a><li>Add Blog</li></a>
+            <a><li>Edit Blog</li></a>
+            <a><li>Delete Blog</li></a>
+          </ul>
+          <h4>Blog Type</h4>
+          <ul>
+            <a><li>Add</li></a>
+            <a><li>Edit</li></a>
+            <a><li>Delete</li></a>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
