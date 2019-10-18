@@ -260,6 +260,9 @@ $max-content-width: 1440px;
 @media (min-width: 1440px) {
   .home {
     #landing-page {
+      padding-left: 100px;
+      padding-right: 100px;
+
       h1 {
         font-size: 80px;
         line-height: 100px;
@@ -272,6 +275,7 @@ $max-content-width: 1440px;
 
       #landing-page-content {
         margin: 0 auto;
+        //padding-left: 44px;
       }
 
       h4 {

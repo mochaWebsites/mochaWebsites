@@ -45,10 +45,16 @@ main {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Josefin Slab', serif;
-  font-weight: 200;
-  color: #ffffff;
+  font-weight: 600;
+  // color: #ffffff;
+  color: $off-white;
   text-align: center;
 }
+
+// h2 {
+//   font-family: 'Open Sans', sans-serif;
+//   font-weight: 100;
+// }
 
 
 h3 {
@@ -71,7 +77,7 @@ a {
 
 form {
   label {
-    display: inline-block;
+    // display: inline-block;
     margin-bottom: 2em;
     position: relative;
     width: 100%;
@@ -86,7 +92,7 @@ form {
     resize: none;
   }
 
-  input, textarea {
+  input, textarea, select {
     background-color: $dark-grey;
     border: 1px solid $light-grey;
     border-radius: 8px;
@@ -107,9 +113,10 @@ form {
     border: 2px solid $hi-blue;
     color: $hi-blue;
     display: block;
-    height: 30px;
-    margin: .5em auto 0 auto;
-    width: 80px;
+    font-size: 20px;
+    height: 50px;
+    margin: 20px auto 0 auto;
+    width: 100px;
 
     &:hover {
       color: $off-white;
@@ -168,11 +175,17 @@ header {
   background: none;
   position: relative;
 
+  h1 {
+    font-size: calc(0.5rem + 4vmin);
+    margin-top: 28px;
+    text-align: left;
+  }
+
   h2 {
-    font-size: calc(0.5rem + 8vmin);
-    font-weight: 200;
+    font-size: calc(0.5rem + 3vmin);
+    // font-weight: 200;
     line-height: calc(0.5rem + 6vmin);
-    margin: calc(0.5rem + 10vmin) 0 4vmin 0;
+    margin: calc(0.5rem + 10vmin) 0 1vmin 0;
     text-align: left;
   }
 
@@ -196,6 +209,7 @@ code {
 
 .subsection-header {
   text-align: center;
+  //margin-top: 20px;
 
   .header-icon {
     width: 38px;
@@ -414,12 +428,14 @@ footer {
 section, article {
   border-radius: 0 20px 0 0;
   box-sizing: border-box;
-  margin: 18px 8px 3rem 8px;
+  // margin: 18px 8px 3rem 8px;
 
   .box {
     -webkit-box-shadow: 12px 12px 38px -15px rgba(0,0,0,0.58);
     -moz-box-shadow: 12px 12px 38px -15px rgba(0,0,0,0.58);
     box-shadow: 12px 12px 38px -15px rgba(0,0,0,0.58);
+
+    max-width: 900px;
   }
 
   .small-box {
@@ -470,6 +486,10 @@ section, article {
   .topper {
     height: 6vh;
   }
+
+  .main-content-container {
+    padding: 0 12px;
+  }
 }
 
 @media (min-width: 600px) {
@@ -478,12 +498,16 @@ section, article {
   }
 
   section {
-    margin-left: 24px;
-    margin-right: 24px;
+    // margin-left: 24px;
+    // margin-right: 24px;
   }
 
   header {
     padding-left: 12px;
+  }
+
+  .main-content-container {
+    padding: 0 44px;
   }
 
   nav {
@@ -545,8 +569,8 @@ section, article {
   }
 
   section, article {
-    margin-left: 44px;
-    margin-right: 44px;
+    // margin-left: 44px;
+    // margin-right: 44px;
 
     .heading-container {
       height: 10vh;
@@ -560,7 +584,7 @@ section, article {
       padding-right: 16px;
       text-align: center;
       vertical-align: top;
-      width: 50%;
+      width: 100%;
     }
 
     .content-container {
@@ -632,8 +656,8 @@ section, article {
   }
 
   section, article {
-    margin-left: 136px;
-    margin-right: 136px;
+    //margin-left: 136px;
+    //margin-right: 136px;
 
     .content-container {
       padding: 20px;

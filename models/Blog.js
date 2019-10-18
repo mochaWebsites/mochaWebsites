@@ -14,7 +14,11 @@ const blogSchema = new Schema({
     required: true
   },
 
-  genre: String,
+  genre: {
+    type: Schema.Types.ObjectId,
+    ref: 'Genre',
+    required: true
+  },
 
   date: {
     type: Date,

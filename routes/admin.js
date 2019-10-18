@@ -11,9 +11,9 @@ router.get('/admin/blog', isAdmin, adminController.renderBlogAddForm);
 router.post('/admin/blog/add', isAdmin, adminController.postAddBlog);
 // router.post('/admin/blog/edit', isAdmin, adminController.getBlogEditForm);
 
-// router.get('/admin/category', isAdmin, adminController.getCategoryForm);
-// router.post('/admin/category/add', isAdmin, adminController.addCategory);
-// router.post('/admin/category/edit', isAdmin, adminController.editCategory);
-// router.post('/admin/category/delete', isAdmin, adminController.deleteCategory);
+// router.get('/admin/genre', isAdmin, adminController.getgenreForm);
+router.post('/admin/genre/add', isAdmin, adminController.postAddGenre);
+// router.post('/admin/genre/edit', isAdmin, adminController.editGenre);
+// router.post('/admin/genre/delete', isAdmin, adminController.deleteGenre);
 
 module.exports = router;
