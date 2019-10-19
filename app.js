@@ -23,7 +23,7 @@ const helpers = require('./util/handlebarsHelpers');
 // const mongoConnect = require('./util/database').mongoConnect;
 
 const mainRoutes = require('./routes/main');
-const formRoutes = require('./routes/email');
+const emailRoutes = require('./routes/email');
 const blogRoutes = require('./routes/blog');
 const adminRoutes = require('./routes/admin');
 
@@ -46,7 +46,7 @@ app.use(session({
   store: store
 }));
 
-app.use(formRoutes);
+app.use(emailRoutes);
 app.use(mainRoutes);
 app.use(blogRoutes);
 app.use(adminRoutes);

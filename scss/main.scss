@@ -28,9 +28,9 @@ body {
   position: relative;
 }
 
-.main-content-container {
-  max-width: $max-content-width;
-}
+// .main-content-container {
+//   max-width: $max-content-width;
+// }
 
 main {
   box-sizing: border-box;
@@ -44,8 +44,9 @@ main {
 // }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Josefin Slab', serif;
-  font-weight: 600;
+  font-family: 'IBM Plex Serif', serif;
+  //font-family: 'Josefin Slab', serif;
+  font-weight: 400;
   // color: #ffffff;
   color: $off-white;
   text-align: center;
@@ -77,8 +78,8 @@ a {
 
 form {
   label {
-    // display: inline-block;
-    margin-bottom: 2em;
+    display: inline-block;
+    margin-bottom: 20px;
     position: relative;
     width: 100%;
   }
@@ -176,16 +177,16 @@ header {
   position: relative;
 
   h1 {
-    font-size: calc(0.5rem + 4vmin);
+    font-size: calc(0.5rem + 6vmin);
     margin-top: 28px;
     text-align: left;
   }
 
   h2 {
-    font-size: calc(0.5rem + 3vmin);
+    font-size: calc(0.5rem + 5vmin);
     // font-weight: 200;
-    line-height: calc(0.5rem + 6vmin);
-    margin: calc(0.5rem + 10vmin) 0 1vmin 0;
+    // line-height: calc(0.5rem + 6vmin);
+    margin-top: calc(0.5rem + 10vmin);
     text-align: left;
   }
 
@@ -225,7 +226,7 @@ code {
   background: linear-gradient(110deg, rgba(93,43,93,1) 70%, rgba(71,34,71,1) 70%);
   // background: linear-gradient(270deg, rgba(71,34,71,1) 35%, rgba(93,43,93,1) 100%);
   box-sizing: border-box;
-  height: 6vh;
+  height: 2vh;
   padding: 14px 20px 0 0;
 
   img {
@@ -267,26 +268,17 @@ nav {
   top: 0;
   font-size: 0;
   font-family: 'Source Sans Pro', sans-serif;
-  letter-spacing: 2.8px;
+  letter-spacing: .8px;
   height: 54px;
-  margin: 0 auto;
-  padding: 0 12px;
+  // padding: 0 12px;
   width: 100%;
   z-index: 2;
-
-  #nav-content-box { 
-    display: flex;
-    align-items: center;
-    max-width: $max-content-width;
-    height: 100%;
-  }
 
   .logo-nav {
     width: 46px;
   }
 
   .nav-btn {
-    margin-left: auto;
     width: 24px;
     z-index: 3;
 
@@ -299,14 +291,11 @@ nav {
     color: white;
     display: inline-block;
     font-size: 1rem;
-    margin-top: 0;
-    margin-bottom: 0;
-    vertical-align: top;
   }
 
   h1 {
-    font-weight: 600;
-    margin-left: 12px;
+    margin: 0;
+    text-align: left;
   }
 
   #large-display {
@@ -388,40 +377,24 @@ nav {
 }
 
 footer {
-  background-color: #212121;
-  box-sizing: border-box;
-  // color: #808080;
+  background-color: $dark-blue;
   height: 50px;
-  margin: 0 auto;
-  // max-width: 1260px;
-  padding: 0 16px;
-  text-align: center;
   width: 100%;
+  margin-top: 20px;
 
-  #footer-content-box {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    margin: 0 auto;
-    max-width: $max-content-width;
-  }
+  -webkit-box-shadow: 12px 12px 38px -15px rgba(0,0,0,1);
+  -moz-box-shadow: 12px 12px 38px -15px rgba(0,0,0,1);
+  box-shadow: 12px 12px 38px -15px rgba(0,0,0,1);
 
   img {
-    opacity: .5;
     width: 40px;
   }
 
   h1 {
     color: $off-white;
     font-size: 14px;
-    letter-spacing: 2px;
+    letter-spacing: .8px;
     line-height: 1em;
-    margin-left: 12px;
-  }
-
-  p {
-    display: inline-block;
-    font-size: 10px;
   }
 }
 
@@ -475,21 +448,7 @@ section, article {
 }
 
 @media (min-width: 1px) and (max-width: 599px) {
-  main {
-    margin: 0 auto;
-  }
 
-  header {
-    padding-left: 12px;
-  }
-
-  .topper {
-    height: 6vh;
-  }
-
-  .main-content-container {
-    padding: 0 12px;
-  }
 }
 
 @media (min-width: 600px) {
@@ -497,37 +456,19 @@ section, article {
     min-height: calc(100vh - 60px);
   }
 
-  section {
-    // margin-left: 24px;
-    // margin-right: 24px;
-  }
-
-  header {
-    padding-left: 12px;
-  }
-
-  .main-content-container {
-    padding: 0 44px;
-  }
-
   nav {
     height: 82px;
-    padding-left: 44px;
-    padding-right: 44px;
 
     .logo-nav {
-      // margin-top: 6px;
       width: 68px;
     }
 
-    .nav-btn {
-      // padding-top: 5px;
+    #hamburger {
       width: 36px;
     }
 
     h1 {
       font-size: 28px;
-      margin-left: 12px;
     }
 
     #nav-overlay {
@@ -610,12 +551,10 @@ section, article {
     height: 82px;
 
     .logo-nav {
-      // margin-top: 6px;
       width: 68px;
     }
 
-    .nav-btn {
-      // padding-top: 5px;
+    #hamburger {
       width: 36px;
     }
 
@@ -651,10 +590,6 @@ section, article {
     font-size: 40px;
   }
 
-  header {
-    padding-left: 20px;
-  }
-
   section, article {
     //margin-left: 136px;
     //margin-right: 136px;
@@ -676,7 +611,7 @@ section, article {
       width: 68px;
     }
 
-    .nav-btn {
+    #hamburger {
       width: 36px;
     }
 
@@ -703,9 +638,9 @@ section, article {
 }
 
 @media (min-width: 1440px) {
-  .main-content-container {
-    margin: 0 auto;
-  }
+  // .main-content-container {
+  //   margin: 0 auto;
+  // }
 
   main {
     margin: 0 auto;

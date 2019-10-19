@@ -15,7 +15,7 @@ $max-content-width: 1440px;
 .home {
   #landing-page-content {
     max-width: $max-content-width;
-    margin: 0 12px;
+    // margin: 0 12px;
   }
 
   #landing-page {
@@ -23,20 +23,20 @@ $max-content-width: 1440px;
     background: linear-gradient(142deg, rgba(0,54,115,1) 35%, rgba(0,118,222,1) 100%);
     box-sizing: border-box;
     height: 100vh;
+    width: 100%;
     margin-left: 0;
     margin-top: 0;
     margin-right: 0;
     padding: 54px 0 0 0;
     position: relative;
-    width: 100%;
 
     h1 {
       font-size: 8vmin;
       letter-spacing: 2.8px;
       line-height: 56px;
-      margin-top: calc(20px + 4vh);
+      margin-top: calc(20px + 2vh);
       margin-bottom: 0;
-      //padding-left: 68px;
+      // padding-left: 68px;
       text-align: left;
     }
 
@@ -50,19 +50,18 @@ $max-content-width: 1440px;
     #landing-page-image-container {
       text-align: center;
     }
-  }
 
-  .title {
-    color: #ffffff;
-    font-size: 42px;
-    font-weight: 600;
-  }
+    .title {
+      color: #ffffff;
+      font-size: 42px;
+      // font-weight: 600;
+    }
 
-  .logo-home {
-    text-align: left;
-    margin-top: calc(28px + 4vh);
-    max-width: 500px;
-    width: calc(200px + 8vh);
+    .logo-home {
+      margin-top: calc(28px + 3vh);
+      max-width: 500px;
+      width: calc(200px + 8vh);
+    }
   }
 
   .arrow {
@@ -130,9 +129,9 @@ $max-content-width: 1440px;
       padding-top: 82px;
       padding-left: 0;
 
-      #landing-page-content {
-        margin: 0 44px;
-      }
+      // #landing-page-content {
+      //   margin: 0 44px;
+      // }
 
       h1 {
         font-size: 48px;
@@ -158,10 +157,6 @@ $max-content-width: 1440px;
         width: calc(150px + 20vh);
         margin-top: calc(2vh);
         margin-bottom: 60px;
-      }
-
-      #landing-page-image-container {
-        
       }
     }
   }
@@ -216,9 +211,9 @@ $max-content-width: 1440px;
         }
       }
 
-      #landing-page-content {
-        margin-left: 44px;
-      }
+      // #landing-page-content {
+      //   margin-left: 44px;
+      // }
 
       h4 {
         font-size: 30px;
