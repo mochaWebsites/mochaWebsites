@@ -5,20 +5,18 @@
   </div>
   <p class="date">{{{ formatDate date }}}</p>
 </header>
-<article class="box">
+<article class="box shadow">
   <div class="topper"></div>
   <div class="meta-content-container">
-    <div class="content-container">
-      {{#each htmlSections }}
-        <div class="content-container">
-          <header id="header-{{ @index }}" class="subsection-header">
-            <img src="/images/SVG/logo-border-thick.svg" class="header-icon">
-            <h3>{{ heading }}</h3>
-          </header>
-          {{{content}}}
-        </div>
-      {{/each}}
-    </div>
+    {{#each htmlSections }}
+      <div class="content-container">
+        <header id="header-{{ @index }}" class="subsection-header">
+          <img src="/images/SVG/logo-border-thick.svg" class="header-icon">
+          <h3>{{ heading }}</h3>
+        </header>
+        {{{content}}}
+      </div>
+    {{/each}}
   </div>
   <div class="topper"></div>
 </article>

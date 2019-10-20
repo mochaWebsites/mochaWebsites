@@ -12,6 +12,7 @@ $off-white: #dfdfdf;
 
 .blog {
   padding-top: 54px;
+  padding-bottom: 54px;
   max-width: 1200px;
 
   article {
@@ -24,18 +25,11 @@ $off-white: #dfdfdf;
   }
 
   .meta-content-container {
-    display: block;
-  }
-
-  .content-container {
-    width: 100%;
+    padding: 12px;
   }
 
   .blog-header {
-    // background: $dark-blue;
-    margin: 9vmin 0 0 0;
-    padding: 1rem;
-    position: relative;
+    margin: 9vmin 0 3vmin 0;
     
     a {
       margin: 0 10px;
@@ -50,6 +44,10 @@ $off-white: #dfdfdf;
       display: inline-block;
       text-align: left;
       margin: 0;
+    }
+
+    & > * {
+      margin-bottom: 12px;
     }
   }
 
@@ -84,7 +82,7 @@ $off-white: #dfdfdf;
 
 @media (min-width: 600px) {
   .blog {
-    padding: 84px 16px 80px 16px;
+    padding: 84px 0 64px 0;
 
     .blog-header {
       margin-top: 5px;

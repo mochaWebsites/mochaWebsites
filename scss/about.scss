@@ -1,8 +1,9 @@
 .about {
   padding-top: 54px;
+  padding-bottom: 44px;
 
-  @media (min-width: 600px) {
-    padding-top: 84px;
+  section:first-of-type {
+    margin-top: calc(0.5rem + 10vmin);
   }
 
   #blog-operations {

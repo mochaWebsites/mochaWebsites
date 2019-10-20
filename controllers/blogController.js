@@ -5,7 +5,7 @@ const Blog = require('../models/Blog');
 exports.renderBlogs = (req, res, err) => {
   Blog.find()
       .then(blogs => {
-        res.render('blogs', {layout: 'default', template: 'about', blogs: blogs});
+        res.render('blogs', {layout: 'default', template: 'index', blogs: blogs});
       })
       .catch(err => {
         throw err;

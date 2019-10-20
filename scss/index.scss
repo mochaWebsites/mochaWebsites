@@ -1,0 +1,34 @@
+.index {
+  padding-top: 54px;
+
+  section:first-of-type {
+    margin-top: calc(0.5rem + 10vmin);
+  }
+
+  section {
+    text-align: left;
+  }
+
+  @media (min-width: 600px) {
+    padding-top: 84px;
+  }
+
+  header {
+    max-width: 900px;
+  }
+
+}
+
+@media (min-width: 600px) {
+  .index {
+    section {
+      .main-content-container {
+        grid-column: 2 / 7;
+      }
+    }
+
+    aside {
+      grid-column: 8 / -1;
+    }
+  }
+}

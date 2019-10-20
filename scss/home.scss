@@ -31,12 +31,10 @@ $max-content-width: 1440px;
     position: relative;
 
     h1 {
-      font-size: 8vmin;
-      letter-spacing: 2.8px;
-      line-height: 56px;
+      font-size: 10vmin;
+      font-weight: 200;
       margin-top: calc(20px + 2vh);
       margin-bottom: 0;
-      // padding-left: 68px;
       text-align: left;
     }
 
@@ -53,15 +51,19 @@ $max-content-width: 1440px;
 
     .title {
       color: #ffffff;
-      font-size: 42px;
-      // font-weight: 600;
+      font-size: 14vmin;
+      // font-weight: 200;
     }
 
     .logo-home {
-      margin-top: calc(28px + 3vh);
-      max-width: 500px;
-      width: calc(200px + 8vh);
+      margin-top: calc(8px + 10vh);
+      max-width: 240px;
+      width: calc(80px + 18vh);
     }
+  }
+
+  section {
+    margin-bottom: calc(0.5rem + 10vmin);
   }
 
   .arrow {
@@ -134,9 +136,9 @@ $max-content-width: 1440px;
       // }
 
       h1 {
-        font-size: 48px;
+        font-size: 60px;
         letter-spacing: 2.8px;
-        line-height: 68px;
+        line-height: 90px;
         //padding-left: 112px;
         text-align: left;
       }
@@ -144,36 +146,24 @@ $max-content-width: 1440px;
       h4 {
         font-size: 24px;
         margin-top: calc(30px + 10vh);
-        //padding-left: 112px;
       }
 
       .title {
         text-align: center;
-        font-size: 84px;
-        line-height: 120px;
+        font-size: 104px;
+        line-height: 110px;
       }
 
       .logo-home {
-        width: calc(150px + 20vh);
-        margin-top: calc(2vh);
+        width: calc(350px + 20vh);
+        margin-top: calc(12vh);
         margin-bottom: 60px;
+        max-width: 300px;
       }
     }
   }
 
   #contact {
-    form {
-      label {
-        margin-bottom: 20px;
-      }
-
-      button {
-        font-size: 1.2rem;
-        height: 44px;
-        width: 98px;
-      }
-    }
-
     .img-container {
       padding-top: 30px;
     }
