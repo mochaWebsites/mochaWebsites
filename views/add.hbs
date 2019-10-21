@@ -47,19 +47,17 @@
     <div class="box">
       <div class="topper"></div>
       <div class="meta-content-container">
-        <div class="content-container">
-          <form id="edit-blog-form" action="/admin/genre/edit" method="get" novalidate>
-            <h4>All Blogs</h4>
-            <ul>
-              {{#each blogs}}
-                <li data-id="{{ id }}">
-                  {{ title }}
-                  <a class="genre-edit-btn">Edit</a>
-                  {{!-- <a class="genre-delete-btn">Delete</a> --}}
-                </li>
-              {{/each}}
-            </ul>
-          </form>
+        <div class="content-container">          
+          <h4>All Blogs</h4>
+          <ul>
+            {{#each blogs}}
+              <li data-id="{{ id }}">
+                {{ title }}
+                <a class="genre-edit-btn">Edit</a>
+                {{!-- <a class="genre-delete-btn">Delete</a> --}}
+              </li>
+            {{/each}}
+          </ul>
         </div>
       </div>
     </div>
@@ -96,18 +94,16 @@
       <div class="topper"></div>
       <div class="meta-content-container">
         <div class="content-container">
-          <form id="edit-genre-form" action="/admin/genre/edit" method="post" novalidate>
-            <h4>All Genres</h4>
-            <ul>
-              {{#each genres}}
-                <li data-id="{{ id }}">
-                  {{ title }}
-                  <a class="genre-edit-btn">Edit</a>
-                  {{!-- <a class="genre-delete-btn">Delete</a> --}}
-                </li>
-              {{/each}}
-            </ul>
-          </form>
+          <h4>All Genres</h4>
+          <ul>
+            {{#each genres}}
+              <li data-id="{{ id }}">
+                {{ title }}
+                <a class="genre-edit-btn">Edit</a>
+                {{!-- <a class="genre-delete-btn">Delete</a> --}}
+              </li>
+            {{/each}}
+          </ul>
         </div>
       </div>
     </div>

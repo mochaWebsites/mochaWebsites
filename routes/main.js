@@ -10,7 +10,7 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/about', (req, res, next) => {
-  res.render('about', {layout: 'default', template: 'about'});
+  res.render('about', {layout: 'default', template: 'aux'});
 });
 
 module.exports = router;

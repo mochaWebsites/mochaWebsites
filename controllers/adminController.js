@@ -6,7 +6,7 @@ const formidable = require('formidable');
 require('dotenv').config();
 
 exports.renderLogin = (req, res, err) => {
-  res.render('admin', {layout: 'default', template: 'about'});
+  res.render('admin', {layout: 'default', template: 'aux'});
 }
 
 exports.postLogin = (req, res, err) => {
@@ -25,14 +25,23 @@ exports.postLogin = (req, res, err) => {
   }
 }
 
-exports.renderBlogAddForm = (req, res, err) => {
+exports.renderAdminPanel = (req, res, err) => {
   if (!req.session.isLoggedIn) {
     res.redirect('/');
   }
 
-  const genres = Genre.find()
-    .then(genreData => {
-      res.render('add', {layout: 'default', template: 'about', genres: genreData});
+  let blogsData;
+
+  Blog.find()
+    .then(blogs => {
+      blogsData = blogs;
+      Genre.find()
+        .then(genreData => {
+          res.render('add', {layout: 'default', template: 'aux', genres: genreData, blogs: blogsData});
+        })
+        .catch(err => {
+          console.log(err);
+        });
     })
     .catch(err => {
       console.log(err);

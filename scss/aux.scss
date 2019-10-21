@@ -1,10 +1,19 @@
-.about {
+.aux {
   padding-top: 54px;
   padding-bottom: 44px;
 
   section:first-of-type {
     margin-top: calc(0.5rem + 10vmin);
   }
+
+  section {
+    margin-bottom: 10vmin;
+  }
+
+  section:last-of-type {
+    margin-bottom: 0;
+  }
+
 
   #blog-operations {
     display: none;
@@ -16,6 +25,10 @@
     // h1 {
     //   text-align: left;
     // }
+  }
+
+  @media (min-width: 600px) {
+    padding: 84px 0 64px 0;
   }
 }
 

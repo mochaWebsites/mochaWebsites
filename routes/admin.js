@@ -7,7 +7,7 @@ const adminController = require('../controllers/adminController');
 router.get('/admin', adminController.renderLogin);
 router.post('/admin', adminController.postLogin);
 
-router.get('/admin/blog', isAdmin, adminController.renderBlogAddForm);
+router.get('/admin/blog', isAdmin, adminController.renderAdminPanel);
 router.post('/admin/blog/add', isAdmin, adminController.postAddBlog);
 // router.post('/admin/blog/edit', isAdmin, adminController.getBlogEditForm);
 
