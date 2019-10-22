@@ -13,4 +13,8 @@ router.get('/about', (req, res, next) => {
   res.render('about', {layout: 'default', template: 'aux'});
 });
 
+router.get('*', (req, res, next) => {
+  res.render('404', {layout: 'default', template: 'aux'});
+});
+
 module.exports = router;

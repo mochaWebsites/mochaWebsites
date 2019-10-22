@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
+    "start-offline": "nodemon app_offline.js",
     "watch-sass": "node-sass scss/main.scss public/css/main.css --watch",
     "compile-sass": "node-sass scss/main.scss public/css/main.comp.css",
     "sass": "node-sass -o public/css scss"

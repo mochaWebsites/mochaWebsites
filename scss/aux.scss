@@ -2,6 +2,30 @@
   padding-top: 54px;
   padding-bottom: 44px;
 
+  #not-found {
+    align-items: center;
+    margin-top: 0;
+
+    header {
+      grid-column: 5 / span 3;
+
+      grid-row: 1;
+    }
+
+    div {
+      // background-image: url("/images/SVG/logo-no-text.svg");
+      // background-size: 260px;
+      // background-repeat: no-repeat;
+      grid-column: 3 / span 2;
+      grid-row: 1;
+      margin-top: 4vh;
+
+      img {
+        width: 20vw;
+      }
+    }
+  }
+
   section:first-of-type {
     margin-top: calc(0.5rem + 10vmin);
   }
