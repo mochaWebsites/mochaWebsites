@@ -15,7 +15,6 @@ $max-content-width: 1440px;
 .home {
   #landing-page-content {
     max-width: $max-content-width;
-    // margin: 0 12px;
   }
 
   #landing-page {
@@ -40,7 +39,6 @@ $max-content-width: 1440px;
 
     h4 {
       bottom: 4vh;
-      //padding-left: 68px;
       position: absolute;
       text-align: left;
     }
@@ -52,7 +50,6 @@ $max-content-width: 1440px;
     .title {
       color: #ffffff;
       font-size: 14vmin;
-      // font-weight: 200;
     }
 
     .logo-home {
@@ -131,15 +128,10 @@ $max-content-width: 1440px;
       padding-top: 82px;
       padding-left: 0;
 
-      // #landing-page-content {
-      //   margin: 0 44px;
-      // }
-
       h1 {
         font-size: 60px;
         letter-spacing: 2.8px;
         line-height: 90px;
-        //padding-left: 112px;
         text-align: left;
       }
 
@@ -195,10 +187,6 @@ $max-content-width: 1440px;
           line-height: 100px;
         }
       }
-
-      // #landing-page-content {
-      //   margin-left: 44px;
-      // }
 
       h4 {
         font-size: 30px;

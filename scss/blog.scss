@@ -30,7 +30,7 @@ $off-white: #dfdfdf;
 
   .blog-header {
     margin: 9vmin 0 0 0;
-    
+
     ul {
       margin: 0;
 
@@ -98,16 +98,16 @@ $off-white: #dfdfdf;
   }
 }
 
-@media (min-width: 900px) {
+// @media (min-width: 900px) {
   
-}
+// }
 
 @media (min-width: 1080px) {
   .blog {
     padding-left: 0;
     padding-right: 0;
     min-height: calc(100vh - 82px);
-    
+
     .box {
       vertical-align: top;
     }

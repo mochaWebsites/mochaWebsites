@@ -1,5 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const favicon = require('serve-favicon');
+var path = require('path');
+
 // const mongoose = require('mongoose');
 // const session = require('express-session');
 // const MongoDBStore = require('connect-mongodb-session')(session);
@@ -13,10 +16,6 @@ const pw = process.env.DB_PASS;
 const MONGODB_URI = `mongodb+srv://Ian:${pw}@cluster0-ipbw3.mongodb.net/blog?retryWrites=true&w=majority`;
 
 const app = express();
-// const store = new MongoDBStore({
-//   uri: MONGODB_URI,
-//   collection: 'sessions'
-// });
 
 const rootDir = require('./util/rootPath');
 const helpers = require('./util/handlebarsHelpers');
@@ -37,14 +36,9 @@ app.engine('hbs', hbs({
 
 app.set('view engine', 'hbs');
 
+app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(rootDir + '/public'));
-// app.use(session({
-//   secret: 'my secret',
-//   resave: false,
-//   saveUninitialized: false,
-//   store: store
-// }));
 
 app.use(emailRoutes);
 app.use(blogRoutes);
@@ -52,15 +46,3 @@ app.use(adminRoutes);
 app.use(mainRoutes);
 
 app.listen(3000);
-
-// mongoose
-//   .connect(
-//     MONGODB_URI,
-//     { useNewUrlParser: true, useUnifiedTopology: true }
-//   )
-//   .then(result => {
-//     app.listen(3000);
-//   })
-//   .catch(err => {
-//     console.log(err);
-//   });

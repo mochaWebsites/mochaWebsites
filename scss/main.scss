@@ -1,6 +1,5 @@
 @import "reset.scss";
 
-// $dark-blue: #00418c;
 $dark-blue: #00408a;
 $light-blue: #d9ebff;
 $hi-blue: #67aeff;
@@ -20,43 +19,22 @@ $max-content-width: 1440px;
 body {
   background-color: $dark-blue;
   color: $off-white;
-  // font-size: 16px;
-  // font-family: 'Barlow', Arial,  sans-serif;
-  // font-family: 'Open Sans', sans-serif;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
   position: relative;
 }
 
-// .main-content-container {
-//   max-width: $max-content-width;
-// }
-
 main {
   box-sizing: border-box;
   margin: 0 auto;
   min-height: calc(100vh - 50px);
-  // max-width: 1260px;
 }
-
-// article {
-//   max-width: 900px;
-// }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'IBM Plex Serif', serif;
-  //font-family: 'Josefin Slab', serif;
   font-weight: 400;
-  // color: #ffffff;
   color: $off-white;
-  // text-align: center;
 }
-
-// h2 {
-//   font-family: 'Open Sans', sans-serif;
-//   font-weight: 100;
-// }
-
 
 h3 {
   margin-bottom: 18px;
@@ -85,7 +63,6 @@ form {
   }
 
   h4 {
-    // margin-bottom: 8px;
     text-align: left;
   }
 
@@ -101,8 +78,6 @@ form {
     color: white;
     font-size: .8em;
     font-family: 'Source Sans Pro', sans-serif;
-    // height: 40px;
-    // margin-top: 14px;
     padding: 6px 12px;
     transition: border-color 2s;
     width: 100%;
@@ -167,7 +142,6 @@ ul {
       display: inline-block;
       height: 20px;
       width: 20px;
-      // background-image: url('../images/SVG/swirl-thick.svg');
     }
   }
 }
@@ -184,9 +158,6 @@ header {
 
   h2 {
     font-size: calc(0.5rem + 5vmin);
-    // font-weight: 200;
-    // line-height: calc(0.5rem + 6vmin);
-    // margin-top: calc(0.5rem + 10vmin);
     text-align: left;
   }
 
@@ -228,7 +199,6 @@ code {
 .topper {
   background-color: $dark-purple;
   background: linear-gradient(110deg, rgba(93,43,93,1) 70%, rgba(71,34,71,1) 70%);
-  // background: linear-gradient(270deg, rgba(71,34,71,1) 35%, rgba(93,43,93,1) 100%);
   box-sizing: border-box;
   height: 2vh;
 
@@ -273,7 +243,6 @@ nav {
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: .8px;
   height: 54px;
-  // padding: 0 12px;
   width: 100%;
   z-index: 2;
 
@@ -328,14 +297,6 @@ nav {
         border-bottom: 3px solid $hi-blue;
       }
     }
-      // display: flex;
-      // align-items: center;
-    //   font-weight: 600;
-    //   height: 100%;
-    //   display: flex;
-    //   padding: 0 20px;
-
-    //   
   }
 
   #nav-overlay {
@@ -382,7 +343,6 @@ footer {
   background-color: #004696;
   height: 50px;
   width: 100%;
-  //margin-top: 20px;
 
   -webkit-box-shadow: 10px 0px 40px -15px rgba(0,0,0,1);
   -moz-box-shadow: 10px 0px 40px -15px rgba(0,0,0,1);
@@ -403,7 +363,6 @@ footer {
 section, article {
   border-radius: 0 20px 0 0;
   box-sizing: border-box;
-  // margin: 18px 8px 3rem 8px;
 
   .box {
     -webkit-box-shadow: 12px 12px 38px -15px rgba(0,0,0,0.58);
@@ -413,19 +372,8 @@ section, article {
     max-width: 900px;
   }
 
-  // .small-box {
-  //   display: inline-block;
-  //   min-width: 60%;
-
-  //   .content-container {
-  //     width: 100%;
-  //   }
-  // }
-
   .meta-content-container  {
     background-color: $dark-grey;
-
-    // padding-top: 30px;
 
     & p:first-of-type {
       margin-top: 0;
@@ -466,7 +414,6 @@ pre {
 @media (min-width: 600px) {
   body {
     font-size: 1.2em;
-    // line-height: 1.2em;
   }
 
   main {
@@ -539,30 +486,6 @@ pre {
       vertical-align: top;
       width: 100%;
     }
-
-    .img-container {
-
-    }
-
-    .content-container {
-      // padding-top: 30px;
-    }
-
-    // .quote-container {
-    //   box-sizing: border-box;
-    //   display: inline-block;
-    //   font-size: 84px;
-    //   padding: 20px;
-    //   width: 50%;
-    // }
-
-    // .meta-content-container {
-    //   display: flex;
-    //   align-items: center;
-    //   flex-wrap: wrap;
-    // }
-
- 
   }
 
   nav {
@@ -609,9 +532,6 @@ pre {
   }
 
   section, article {
-    //margin-left: 136px;
-    //margin-right: 136px;
-
     .content-container {
       padding: 20px;
     }
@@ -655,10 +575,6 @@ pre {
 }
 
 @media (min-width: 1440px) {
-  // .main-content-container {
-  //   margin: 0 auto;
-  // }
-
   main {
     margin: 0 auto;
   }

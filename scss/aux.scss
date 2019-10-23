@@ -13,9 +13,6 @@
     }
 
     div {
-      // background-image: url("/images/SVG/logo-no-text.svg");
-      // background-size: 260px;
-      // background-repeat: no-repeat;
       grid-column: 3 / span 2;
       grid-row: 1;
       margin-top: 4vh;
@@ -45,10 +42,6 @@
 
   header {
     max-width: 900px;
-
-    // h1 {
-    //   text-align: left;
-    // }
   }
 
   @media (min-width: 600px) {
@@ -56,12 +49,3 @@
   }
 }
 
-// #admin {
-//   .box {
-//     display: inline-block;
-
-//     .content-container {
-//       width: 100%;
-//     }
-//   }
-// }

@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const MongoDBStore = require('connect-mongodb-session')(session);
 
+const favicon = require('serve-favicon');
+
 const hbs = require('express-handlebars');
 const prism = require('prismjs');
 
@@ -37,6 +39,7 @@ app.engine('hbs', hbs({
 
 app.set('view engine', 'hbs');
 
+app.use(favicon(__dirname + '/public/images/favicon.ico'))
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(rootDir + '/public'));
 app.use(session({
