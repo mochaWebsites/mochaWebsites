@@ -38,8 +38,8 @@ $max-content-width: 1440px;
     }
 
     h4 {
-      bottom: 4vh;
-      position: absolute;
+      margin-bottom: 4vh;
+      // position: absolute;
       text-align: left;
     }
 
@@ -53,7 +53,7 @@ $max-content-width: 1440px;
     }
 
     .logo-home {
-      margin-top: calc(8px + 10vh);
+      // margin-top: calc(8px + 10vh);
       max-width: 340px;
       width: calc(80px + 18vh);
     }
@@ -129,27 +129,27 @@ $max-content-width: 1440px;
       padding-left: 0;
 
       h1 {
-        font-size: 60px;
+        font-size: 50px;
         letter-spacing: 2.8px;
-        line-height: 90px;
+        line-height: 80px;
         text-align: left;
       }
 
       h4 {
         font-size: 24px;
-        margin-top: calc(30px + 10vh);
+        // margin-top: calc(30px + 10vh);
       }
 
       .title {
         text-align: center;
-        font-size: 104px;
-        line-height: 110px;
+        font-size: 84px;
+        line-height: 94px;
       }
 
       .logo-home {
-        width: calc(350px + 20vh);
-        margin-top: calc(12vh);
-        margin-bottom: 60px;
+        //width: calc(150px + 10vh);
+        // margin-top: calc(12vh);
+        //margin-bottom: 60px;
         max-width: 300px;
       }
     }

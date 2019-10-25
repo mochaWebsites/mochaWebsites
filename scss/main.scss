@@ -54,10 +54,15 @@ a {
   }
 }
 
+.input-message, .server-input-message {
+  color: $invalid-red;
+  font-size: 16px;
+}
+
 form {
   label {
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     position: relative;
     width: 100%;
   }
@@ -100,19 +105,13 @@ form {
     }
   }
 
-  .input-message {
-    font-size: 16px;
-  }
-
   input + .input-message {
-    color: $invalid-red;
     position: absolute;
     bottom: -28px;
     left: 12px;
   }
 
   textarea + .input-message {
-    color: $invalid-red;
     position: absolute;
     bottom: -24px;
     left: 12px;
@@ -344,10 +343,6 @@ footer {
   height: 50px;
   width: 100%;
 
-  -webkit-box-shadow: 10px 0px 40px -15px rgba(0,0,0,1);
-  -moz-box-shadow: 10px 0px 40px -15px rgba(0,0,0,1);
-  box-shadow: 10px 0px 40px -15px rgba(0,0,0,1);
-
   img {
     width: 40px;
   }
@@ -369,7 +364,7 @@ section, article {
     -moz-box-shadow: 12px 12px 38px -15px rgba(0,0,0,0.58);
     box-shadow: 12px 12px 38px -15px rgba(0,0,0,0.58);
 
-    max-width: 900px;
+    // max-width: 900px;
   }
 
   .meta-content-container  {
@@ -490,6 +485,12 @@ pre {
 
   nav {
     height: 82px;
+
+    #main-nav-header {
+      h1 {
+        margin-left: 2px;
+      }
+    }
 
     .logo-nav {
       width: 68px;

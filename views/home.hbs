@@ -94,6 +94,11 @@
   <div class="main-content-container">
     <header>
       <h2>Contact</h2>
+      {{#if errorMessages }}
+        {{#each errorMessages }}
+          <p class="server-input-message">{{ this }}</p>
+        {{/each}}
+      {{/if}}
     </header>
     <div class="box">
       <div class="topper"></div>
