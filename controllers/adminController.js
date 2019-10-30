@@ -1,5 +1,8 @@
 const Blog = require('../models/Blog');
 const Genre = require('../models/Genre');
+const Tag = require('../models/Tag');
+
+const mongoose = require('mongoose');
 
 const formidable = require('formidable');
 
@@ -25,74 +28,67 @@ exports.postLogin = (req, res, err) => {
   }
 }
 
-exports.renderAdminPanel = (req, res, err) => {
+exports.renderAdminPanel = async (req, res, err) => {
   if (!req.session.isLoggedIn) {
     res.redirect('/');
   }
 
-  let blogsData;
+  const blogData = await Blog.find();
+  const genreData = await Genre.find();
+  const tagData = await Tag.find();
 
-  Blog.find()
-    .then(blogs => {
-      blogsData = blogs;
-      Genre.find()
-        .then(genreData => {
-          res.render('add', {layout: 'default', template: 'aux', genres: genreData, blogs: blogsData});
-        })
-        .catch(err => {
-          console.log(err);
-        });
-    })
-    .catch(err => {
-      console.log(err);
-    });
+  res.render('add', {
+    layout: 'default',
+    template: 'aux',
+    genres: genreData,
+    blogs: blogData,
+    tags: tagData
+  });
 }
 
-// exports.renderCategoryAddForm = (req, res, err) => {
-//   if (!req.session.isLoggedIn) {
-//     res.redirect('/');
-//   }
-
-//   res.render('add', {layout: 'default', template: 'about'});
-// }
-
-exports.postAddBlog = (req, res, err) => {
+exports.postAddBlog = async (req, res, err) => {
   const form = new formidable.IncomingForm();
 
   form.parse(req, (err, fields, files) => {
     const temp_file_path = files.file.path;
 
-    Blog.toString(temp_file_path, mdText => {
-      const html = Blog.markdownToHtml(mdText);
-      const htmlSections = Blog.htmlToSections(html);
+    const formData = Blog.parseFormData(fields, files);
+    const blog = new Blog(formData);
 
-      const blogData = {
-        title: fields.title,
-        date: fields.date,
-        genre: fields.genre,
-        markdown: mdText,
-        htmlSections: htmlSections,
+    try {
+      // save the blog
+      const blogData = await blog.save();
+      // add the id of the blog to genre used
+      // 1. find genre Doucument
+      const genreData = await Genre.findById(genreId);
+      // 2. update genre Document
+      genreData.blogs.push(blog.id);
+
+      // add the id of the blog to each tag used
+      // 1. find each tag used
+      const tags = blogData.populate('tags');
+      // 2. iterate over each tag used
+      for (let i = 0; i < tags.length; tags += 1) {
+        // 3. Add blogId to each tag
+        console.log(tags[i]);
+        // 
       }
 
-      const blog = new Blog(blogData);
-      blog.save()
-        .then(result => {
-          // find Genre used in blog by title
-          Genre.find({title: result.title})
-            .then(genre => {
-              genre
-            })
-            .catch(err => {
-              console.log(err);
-            });
+    } catch (err) {
+      console.log(err);
+    }
 
-          console.log('blog saved!');
-          res.redirect('/blogs');
-        })
-        .catch(err => {
-          console.log(err);
-        })
-    });
+      // genreData.blogs.push(blog.id);
+      // ## add blog id to associated genre and tags
+      // a. populate the blogData and add BlogId to blogs
+      // b. find the genre and #each tag used in by blogData
+      // then add blog id to each
+
+      // #tags
+      // - find id's of tags included in this blog post
+      // - populate tags with real tag Documents
+      // - for each tag Document, add this blog Id to it's array of blogs
+      //   - if Id already exists, don't add it
   });
 }
 
@@ -102,32 +98,74 @@ exports.postAddGenre = (req, res, err) => {
 
   genre.save()
     .then(genreData => {
-      console.log(genreData);
+      res.redirect('admin/blog');
     }).catch(err => {
       console.log(err);
     });
 }
 
-// exports.renderCategoryForm = (req, res, err) => {
-//   const data = Category.fetchAll(data => {
-//     console.log(data);
-//     // res.render('category', {layout: 'default', template: 'about', data: data});
-//   });
-// }
+exports.postAddTag = (req, res, err) => {
+  const title = req.body['tag-title'];
+  const tag = new Tag({title: title});
 
-// exports.addCategory = (req, res, err) => {
-//   const title = req.body.title;
-//   const newCategory = new Category(title);
+  tag.save()
+    .then(tagData => {
+      res.redirect('admin/blog');
+    }).catch(err => {
+      console.log(err);
+    });
+}
 
-//   newCategory.add(result => {
-//     res.redirect('/');
-//   });
-// }
+exports.renderEditBlog = async (req, res, err) => {
+  const blogId = req.params.id;
 
-// exports.editCategory = (req, res, err) => {
+  try {
+    const genreData = await Genre.find();
+    const blogData = await Blog.findById(blogId);
+    const dateString = blogData.date.toISOString().substr(0, 10);
 
-// }
+    res.render('editBlog', {
+      layout: 'default',
+      template: 'aux',
+      blog: blogData,
+      date: dateString,
+      genres: genreData
+    });
+  } catch (err) {
+    console.log(err);
+  }
+}
 
-// exports.deleteCategory = (req, res, err) => {
+exports.postEditBlog = async (req, res, err) => {
+  const blogId = req.params.id;
+  const form = new formidable.IncomingForm();
 
-// }
+  form.parse(req, (err, fields, files) => {
+    const temp_file_path = files.file.path;
+
+    const formData = Blog.parseFormData(fields, files);
+    const blog = new Blog(formData);
+
+    try {
+      // save the blog
+      const blogData = await blog.save();
+      // add the id of the blog to genre used
+      // 1. find genre Doucument
+      const genreData = await Genre.findById(genreId);
+      // 2. update genre Document
+      genreData.blogs.push(blog.id);
+
+      // add the id of the blog to each tag used
+      // 1. find each tag used
+      const tags = blogData.populate('tags');
+      // 2. iterate over each tag used
+      for (let i = 0; i < tags.length; tags += 1) {
+        // 3. Add blogId to each tag
+        console.log(tags[i]);
+        // ...
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  });
+}

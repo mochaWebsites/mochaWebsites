@@ -12,7 +12,12 @@ router.post('/admin/blog/add', isAdmin, adminController.postAddBlog);
 // router.post('/admin/blog/edit', isAdmin, adminController.getBlogEditForm);
 
 // router.get('/admin/genre', isAdmin, adminController.getgenreForm);
+router.get('/admin/blog/edit/:id', isAdmin, adminController.renderEditBlog);
+router.post('/admin/blog/edit/:id', isAdmin, adminController.postEditBlog);
+
 router.post('/admin/genre/add', isAdmin, adminController.postAddGenre);
+router.post('/admin/tag/add', isAdmin, adminController.postAddTag);
+
 // router.post('/admin/genre/edit', isAdmin, adminController.editGenre);
 // router.post('/admin/genre/delete', isAdmin, adminController.deleteGenre);
 

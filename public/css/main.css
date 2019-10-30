@@ -89,6 +89,18 @@ form button {
     color: #dfdfdf;
     border-color: #dfdfdf; }
 
+form .checkbox-container {
+  display: block; }
+
+form label.checkbox-label {
+  display: inline-block;
+  margin: 0;
+  width: auto; }
+
+form input[type="checkbox"] {
+  display: inline-block;
+  width: 20px; }
+
 form input + .input-message {
   position: absolute;
   bottom: -28px;
@@ -269,9 +281,9 @@ section, article {
   border-radius: 0 20px 0 0;
   box-sizing: border-box; }
   section .box, article .box {
-    -webkit-box-shadow: 12px 12px 38px -15px rgba(0, 0, 0, 0.58);
-    -moz-box-shadow: 12px 12px 38px -15px rgba(0, 0, 0, 0.58);
-    box-shadow: 12px 12px 38px -15px rgba(0, 0, 0, 0.58); }
+    -webkit-box-shadow: 8px 8px 28px -15px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 8px 8px 28px -15px rgba(0, 0, 0, 0.58);
+    box-shadow: 8px 8px 28px -15px rgba(0, 0, 0, 0.58); }
   section .meta-content-container, article .meta-content-container {
     background-color: #2b2b2b; }
     section .meta-content-container p:first-of-type, article .meta-content-container p:first-of-type {
@@ -289,6 +301,13 @@ section, article {
 
 pre {
   margin-top: 10px; }
+
+.admin-list .controls {
+  float: right;
+  text-align: right;
+  display: inline-block; }
+  .admin-list .controls a {
+    margin-left: 20px; }
 
 @media (min-width: 1px) and (max-width: 599px) {
   body {
@@ -334,7 +353,6 @@ pre {
     font-size: calc(14px + 0.38vw);
     padding-left: 16px;
     padding-right: 16px;
-    text-align: center;
     vertical-align: top;
     width: 100%; }
   nav {

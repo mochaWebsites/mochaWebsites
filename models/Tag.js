@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const genreSchema = new Schema({
+const tagSchema = new Schema({
   title: {
     type: String,
     required: true,
@@ -11,4 +11,4 @@ const genreSchema = new Schema({
   blogs: [{type: Schema.Types.ObjectId, ref: 'Blog'}],
 });
 
-module.exports = mongoose.model('Genre', genreSchema);
+module.exports = mongoose.model('Tag', tagSchema);

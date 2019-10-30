@@ -105,6 +105,21 @@ form {
     }
   }
 
+  .checkbox-container {
+    display: block;
+  }
+
+  label.checkbox-label {
+    display: inline-block;
+    margin: 0;
+    width: auto;
+  }
+
+  input[type="checkbox"] {
+    display: inline-block;
+    width: 20px;
+  }
+
   input + .input-message {
     position: absolute;
     bottom: -28px;
@@ -363,8 +378,6 @@ section, article {
     -webkit-box-shadow: 8px 8px 28px -15px rgba(0,0,0,0.68);
     -moz-box-shadow: 8px 8px 28px -15px rgba(0,0,0,0.58);
     box-shadow: 8px 8px 28px -15px rgba(0,0,0,0.58);
-
-    // max-width: 900px;
   }
 
   .meta-content-container  {
@@ -398,6 +411,18 @@ section, article {
 
 pre {
   margin-top: 10px;
+}
+
+.admin-list {
+  .controls {
+    float: right;
+    text-align: right;
+    display: inline-block;
+
+    a {
+      margin-left: 20px;
+    }
+  }
 }
 
 @media (min-width: 1px) and (max-width: 599px) {
@@ -477,7 +502,7 @@ pre {
       font-size: calc(14px + 0.38vw);
       padding-left: 16px;
       padding-right: 16px;
-      text-align: center;
+      // text-align: center;
       vertical-align: top;
       width: 100%;
     }

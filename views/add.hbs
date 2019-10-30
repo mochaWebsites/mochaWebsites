@@ -28,6 +28,16 @@
               <p class="input-message hidden">Invalid genre</p>
             </label>
             <label>
+              <h4>Tags</h4>
+              {{#each tags}}
+                <div class="checkbox-container">
+                  <input type="checkbox" id="tag-{{ title }}" name="tags" value="{{ id }}">
+                  <label for="tag-{{ title }}" class="checkbox-label">{{ title}}</label>
+                </div>
+              {{/each}}
+              <p class="input-message hidden">Invalid tag selection</p>
+            </label>
+            <label>
               <h4>Content</h4>
               <input type="file" name="file" id="add-file">
               <p class="input-message hidden">Invalid file</p>
@@ -47,14 +57,15 @@
     <div class="box">
       <div class="topper"></div>
       <div class="meta-content-container">
-        <div class="content-container">          
+        <div class="content-container"> 
           <h4>All Blogs</h4>
-          <ul>
+          <ul class="admin-list">
             {{#each blogs}}
               <li data-id="{{ id }}">
                 {{ title }}
-                <a class="genre-edit-btn">Edit</a>
-                {{!-- <a class="genre-delete-btn">Delete</a> --}}
+                <div class="controls">
+                  <a href="/admin/blog/edit/{{ id }}">Edit</a>
+                </div>
               </li>
             {{/each}}
           </ul>
@@ -100,6 +111,52 @@
               <li data-id="{{ id }}">
                 {{ title }}
                 <a class="genre-edit-btn">Edit</a>
+                {{!-- <a class="genre-delete-btn">Delete</a> --}}
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="main-content-container">
+    <header>
+      <h2>Add Tag</h2>
+    </header>
+    <div class="box">
+      <div class="topper"></div>
+      <div class="meta-content-container">
+        <div class="content-container">
+          <form id="add-genre-form" action="/admin/tag/add" method="post" novalidate>
+            <label>
+              <h4>Title</h4>
+              <input type="text" name="tag-title" id="add-genre-title" placeholder="New Tag Title" required>
+              <p class="input-message hidden">What's the title?</p>
+            </label>
+            <button type="submit">Add</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="main-content-container">
+    <header>
+      <h2>Edit Tag</h2>
+    </header>
+    <div class="box">
+      <div class="topper"></div>
+      <div class="meta-content-container">
+        <div class="content-container">
+          <h4>All Tags</h4>
+          <ul>
+            {{#each tags}}
+              <li data-id="{{ id }}">
+                {{ title }}
+                <a class="tag-edit-btn">Edit</a>
                 {{!-- <a class="genre-delete-btn">Delete</a> --}}
               </li>
             {{/each}}
