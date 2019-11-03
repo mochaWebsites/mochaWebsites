@@ -1,0 +1,41 @@
+<header class="blog-header">
+  <a>blogs</a>><a>basic web</a>><a>what is the dom?</a>
+  <h1>The Factory Pattern</h1>
+  <h5 class="date">October 2019</h5>
+</header>
+<article class="box">
+  <div class="topper"></div>
+  <div class="meta-content-container">
+    <div class="content-container">
+      <header class="subsection-header">
+        <img src="images/SVG/logo-border-thick.svg" class="header-icon">
+        <h3>Factory Pattern</h3>
+      </header>
+      <p>A Constructor is a function called with the <code>new</code> keyword that is used to create objects.</p>
+      <p>The constructor function creates a new object who’s prototype is set to the Constructor’s prototype property. The constructor function is run with its execution context set to the new object. Unless another object is returned explicitly, the constructor implicitly returns the created object.</p>
+
+      <p>What would some real-world uses of a factory function look like?
+      <ul>
+        <li>Factory function called within another object creation pattern </li>
+        <li>Another object creation pattern being called within a factory function </li>
+        <li>Letting parameters determine the type of the object returned </li>
+      </ul>
+    </div>
+    <div class="content-container">
+      <header class="subsection-header">
+        <img src="images/SVG/logo-border-thick.svg" class="header-icon">
+        <h3>Why it's nice to use:</h3>
+      </header>
+      <p>The Factory Pattern is cool because it’s simple and doesn’t make use of features that you may not need. It doesn’t concern the developer with complexities such as changing the value of <code>this</code>. It doesn’t implicitly return the created object. You could return <code>null</code> if some error condition is met.</p>
+      <p>Also, it doesn’t use the <code>new</code> keyword (or any other boilerplate code). Some developers avoid the <code>new</code> keyword because it can lead to errors when <code>new</code> is accidentally omitted.</p>
+    </div>
+    <div class="content-container">
+      <header class="subsection-header">
+        <img src="images/SVG/logo-border-thick.svg" class="header-icon">
+        <h3>Why it might not be what you want:</h3>
+      </header>
+      <p>First, objects created by a factory function are not linked in a discernable way to the factory function. For example, <code>object instanceof function</code> does not work. This also means that objects created by the factory function don’t inherit from the factory function’s prototype. This can be a pro or con depending on who you ask or the way in which you use it.</p>
+      <p>Secondly, properties aren’t shared among all created objects, meaning each new object returned by a factory function instantiates new methods which is redundant and leads to more resources being used than necessary.</p>
+    </div>
+  <div class="topper"></div>
+</article>

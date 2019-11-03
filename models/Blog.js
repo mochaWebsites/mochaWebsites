@@ -20,7 +20,7 @@ const blogSchema = new Schema({
     required: true
   },
 
-  tags: [{type: Schema.Types.ObjectId}],
+  tags: [{type: Schema.Types.ObjectId, ref: 'Tag'}],
 
   date: {
     type: Date,
@@ -69,29 +69,6 @@ blogSchema.statics.htmlToSections = (html) => {
   });
 
   return sections;
-}
-
-blogSchema.statics.parseFormData = (fields, files) => {
-  const temp_file_path = files.file.path;
-
-  try {
-    const mdText = await Blog.toString(temp_file_path);
-  } catch (err) {
-    console.log(err);
-  }
-
-  const html = Blog.markdownToHtml(mdText);
-  const htmlSections = Blog.htmlToSections(html);
-  const genreId = mongoose.Types.ObjectId(fields.genre);
-
-  return {
-    title: fields.title,
-    date: fields.date,
-    genre: genreId,
-    // tags: tags,
-    markdown: mdText,
-    htmlSections: htmlSections,
-  };
 }
 
 module.exports = mongoose.model('Blog', blogSchema);

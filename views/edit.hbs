@@ -1,29 +1,50 @@
-<section id="edit">
-  <header>
-    <h2>Edit Blog</h2>
-  </header>
-  <div class="box">
-    <div class="topper"></div>
-    <div class="meta-content-container">
-      <div class="content-container">
-        <form id="edit-form" action="/admin/edit" method="POST" novalidate>
-          <label>
-            <h4>Title</h4>
-            <input type="text" name="edit-title" id="adit-title" placeholder="New Title" required>
-            <p class="input-message hidden">What's the title?</p>
-          </label>
-          <label>
-            <h4>Date</h4>
-            <input type="date" name="edit-date" id="edit-date" required>
-            <p class="input-message hidden">Invalid date</p>
-          </label>
-          <label>
-            <h4>Content</h4>
-            <textarea name="edit-content" id="edit-content" placeholder="markdown text" required></textarea>
-            <p class="input-message hidden">Invalid content</p>
-          </label>
-          <button type="submit">Send</input>
-        </form>
+<section>
+  <div class="main-content-container">
+    <header>
+      <h2>Edit Blog</h2>
+    </header>
+    <div class="box">
+      <div class="topper"></div>
+      <div class="meta-content-container">
+        <div class="content-container">
+          <form id="add-form" action="/admin/blog/edit/{{ blog.id }}" method="post" enctype="multipart/form-data" novalidate>
+            <label>
+              <h4>Title</h4>
+              <input type="text" name="title" id="add-title" value="{{ blog.title }}" required>
+              <p class="input-message hidden">What's the title?</p>
+            </label>
+            <label>
+              <h4>Date</h4>
+              <input type="date" name="date" id="add-date" value={{ dateStr }} required>
+              <p class="input-message hidden">Invalid date</p>
+            </label>
+            <label>
+              <h4>Genre</h4>
+              <select>
+                {{#each genres}}
+                  <option value="{{ _id }}" {{{selectedIfEqualObjectId @root.blog.genre _id}}}>{{ title }}</option>
+                {{/each}}
+              </select>
+              <p class="input-message hidden">Invalid genre</p>
+            </label>
+            <label>
+              <h4>Tags</h4>
+              {{#each tags}}
+                <div class="checkbox-container">
+                  <input type="checkbox" id="tag-{{ title }}" name="tags[]" value="{{ id }}" {{{checkedIfIncluded @root.blog.tags id}}}>
+                  <label for="tag-{{ title }}" class="checkbox-label">{{ title}}</label>
+                </div>
+              {{/each}}
+              <p class="input-message hidden">Invalid tag selection</p>
+            </label>
+            <label>
+              <h4>Content</h4>
+              <input type="file" name="file" id="add-file">
+              <p class="input-message hidden">Invalid file</p>
+            </label>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>

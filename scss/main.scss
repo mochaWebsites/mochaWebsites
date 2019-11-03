@@ -59,6 +59,44 @@ a {
   font-size: 16px;
 }
 
+.warning-message {
+  color: $invalid-red;
+}
+
+.sidebar {
+  display: inline-block;
+  margin-top: 2vh;
+  position: sticky;
+  top: 2vh;
+
+  h3 {
+    margin-top: 30px;
+    text-align: left;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  li {
+    padding-left: 22px;
+  }
+}
+
+.aux .sidebar {
+  margin-top: calc(0.5rem + 10vmin + 2vh + 62px);
+  padding-left: 22px;
+
+  li {
+    padding-left: 16px;
+    width: 200px;
+  }
+
+  ul {
+    margin-left: 0;
+  }
+}
+
 form {
   label {
     display: inline-block;
@@ -244,6 +282,19 @@ code {
   -webkit-box-shadow: 8px 8px 28px -10px rgba(0,0,0,0.58);
   -moz-box-shadow: 8px 8px 28px -10px rgba(0,0,0,0.58);
   box-shadow: 8px 8px 28px -10px rgba(0,0,0,0.58);
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.error {
+  border-color: $invalid-red;
+  box-shadow: none;
+}
+
+.success {
+  border-color: $success-green;
 }
 
 nav {
@@ -455,7 +506,7 @@ pre {
       font-size: 28px;
     }
 
-    #nav-overlay {
+    #nav-overlay {sid
       header {
         height: 72px;
         padding: 10px 36px;
@@ -586,6 +637,15 @@ pre {
     #large-display {
       display: inline-block;
       margin-left: auto;
+    }
+  }
+
+  .sidebar {
+    display: inline-block;
+
+    ul {
+      position: sticky;
+      top: 2vh;
     }
   }
 

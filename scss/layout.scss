@@ -114,6 +114,7 @@ footer {
 
     section {
       grid-template-columns: $mediumTemplateColumns;
+      grid-column: 3 / -4;
     }
 
     &.blog {
@@ -206,8 +207,13 @@ footer {
     &.aux {
       section {
         .main-content-container {
-          grid-column: 3 / -4;
+          grid-column: 1 / -1;
         }
+      }
+
+      aside {
+        grid-column: -4 / -1;
+        grid-row: 1;
       }
     }
 

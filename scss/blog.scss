@@ -65,22 +65,6 @@ $off-white: #dfdfdf;
     margin-bottom: 24px;
     position: relative;
   }
-
-  .sidebar {
-    display: none;
-    margin-top: 2vh;
-    position: sticky;
-    top: 2vh;
-
-    h3 {
-      margin-top: 0;
-      text-align: left;
-    }
-
-    li {
-      padding-left: 22px;
-    }
-  }
 }
 
 @media (min-width: 600px) {
@@ -118,15 +102,6 @@ $off-white: #dfdfdf;
 
     article {
       grid-row: 2;
-    }
-
-    .sidebar {
-      display: inline-block;
-
-      ul {
-        position: sticky;
-        top: 2vh;
-      }
     }
   }
 }
